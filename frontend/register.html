@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register - AI Timetable Generation System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-card">
+    <div class="auth-icon">&#128197;</div>
+    <h1>Create Admin<br>Account</h1>
+    <p class="subtitle">Register to manage timetables</p>
+
+    <div id="alertBox" class="alert alert-error"></div>
+
+    <form id="registerForm">
+      <div class="input-group">
+        <span class="icon">&#128100;</span>
+        <input type="text" id="username" placeholder="Choose a username" required>
+      </div>
+      <div class="input-group">
+        <span class="icon">&#128274;</span>
+        <input type="password" id="password" placeholder="Choose a password" required>
+      </div>
+      <div class="input-group">
+        <span class="icon">&#128274;</span>
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+      </div>
+      <button type="submit" class="btn-primary">Register</button>
+    </form>
+
+    <div class="auth-footer">
+      Already have an account? <a href="login.html">Login</a>
+    </div>
+  </div>
+
+<script src="js/api.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faculty & Subjects - AI Timetable Generation System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">&#128197;</div>
+      AI Timetable System
+    </div>
+    <nav>
+      <a href="dashboard.html">&#128202; Dashboard</a>
+      <a href="faculty.html" class="active">&#128101; Faculty & Subjects</a>
+      <a href="generate.html">&#9881; Generate Timetable</a>
+      <a href="view.html">&#128196; View Timetable</a>
+    </nav>
+    <div class="logout" onclick="logout()">&#8592; Logout</div>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <h2>Faculty & Subject Management</h2>
+      <div class="admin-chip"><span class="avatar">A</span> <span id="adminName">Admin</span></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="facultyTab">Faculty Management</button>
+      <button class="tab-btn" data-tab="subjectTab">Subject Management</button>
+    </div>
+
+    <!-- FACULTY TAB -->
+    <div id="facultyTab" class="tab-panel active">
+      <div class="card">
+        <h3>Add Faculty</h3>
+        <div id="facultyAlert" class="alert alert-error"></div>
+        <form id="facultyForm">
+          <input type="hidden" id="facultyId">
+          <div class="form-row">
+            <div>
+              <label>Faculty Name</label>
+              <input type="text" id="facultyName" required>
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" id="facultyEmail" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label>Department</label>
+              <select id="facultyDepartment" required>
+                <option value="">Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="MECH">MECH</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="IT">IT</option>
+              </select>
+            </div>
+            <div></div>
+          </div>
+          <button type="submit" class="btn-small" id="facultySubmitBtn">+ Add Faculty</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Faculty List</h3>
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Faculty Name</th><th>Department</th><th>Email</th><th>Action</th></tr>
+          </thead>
+          <tbody id="facultyTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SUBJECT TAB -->
+    <div id="subjectTab" class="tab-panel">
+      <div class="card">
+        <h3>Add Subject</h3>
+        <div id="subjectAlert" class="alert alert-error"></div>
+        <form id="subjectForm">
+          <input type="hidden" id="subjectId">
+          <div class="form-row">
+            <div>
+              <label>Subject Name</label>
+              <input type="text" id="subjectName" required>
+            </div>
+            <div>
+              <label>Department</label>
+              <select id="subjectDepartment" required>
+                <option value="">Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="MECH">MECH</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="IT">IT</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label>Semester</label>
+              <select id="subjectSemester" required>
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+                <option value="Semester 3">Semester 3</option>
+                <option value="Semester 4">Semester 4</option>
+                <option value="Semester 5">Semester 5</option>
+                <option value="Semester 6">Semester 6</option>
+                <option value="Semester 7">Semester 7</option>
+                <option value="Semester 8">Semester 8</option>
+              </select>
+            </div>
+            <div>
+              <label>Assign Faculty</label>
+              <select id="subjectFaculty">
+                <option value="">Unassigned</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label>Type</label>
+              <select id="subjectIsLab">
+                <option value="false">Lecture</option>
+                <option value="true">Lab</option>
+              </select>
+            </div>
+            <div></div>
+          </div>
+          <button type="submit" class="btn-small" id="subjectSubmitBtn">+ Add Subject</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Subject List</h3>
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Subject Name</th><th>Department</th><th>Semester</th><th>Type</th><th>Action</th></tr>
+          </thead>
+          <tbody id="subjectTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/faculty.js"></script>
+</body>
+</html>

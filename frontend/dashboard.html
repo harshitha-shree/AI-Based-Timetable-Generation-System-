@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - AI Timetable Generation System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">&#128197;</div>
+      AI Timetable System
+    </div>
+    <nav>
+      <a href="dashboard.html" class="active">&#128202; Dashboard</a>
+      <a href="faculty.html">&#128101; Faculty & Subjects</a>
+      <a href="generate.html">&#9881; Generate Timetable</a>
+      <a href="view.html">&#128196; View Timetable</a>
+    </nav>
+    <div class="logout" onclick="logout()">&#8592; Logout</div>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <h2>Dashboard</h2>
+      <div class="admin-chip"><span class="avatar">A</span> <span id="adminName">Admin</span></div>
+    </div>
+
+    <div class="stat-cards">
+      <div class="stat-card faculty">
+        <div class="icon-circle">&#128101;</div>
+        <div class="label">Total Faculty</div>
+        <div class="value" id="totalFaculty">-</div>
+      </div>
+      <div class="stat-card subjects">
+        <div class="icon-circle">&#128218;</div>
+        <div class="label">Total Subjects</div>
+        <div class="value" id="totalSubjects">-</div>
+      </div>
+      <div class="stat-card classrooms">
+        <div class="icon-circle">&#127963;</div>
+        <div class="label">Total Classrooms</div>
+        <div class="value" id="totalClassrooms">-</div>
+      </div>
+    </div>
+
+    <div class="welcome-banner">
+      <div>
+        <h3>Welcome Admin!</h3>
+        <p>Generate and manage timetables easily using AI-powered scheduling.</p>
+        <a href="generate.html"><button class="btn-primary" style="width:auto; padding:10px 22px;">Generate Timetable &#8594;</button></a>
+      </div>
+      <div style="font-size:60px;">&#128197;</div>
+    </div>
+  </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

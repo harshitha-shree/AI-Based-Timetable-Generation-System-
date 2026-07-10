@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login - AI Timetable Generation System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-card">
+    <div class="auth-icon">&#128197;</div>
+    <h1>AI Timetable<br>Generation System</h1>
+    <p class="subtitle">Welcome Back! Please login to continue</p>
+
+    <div id="alertBox" class="alert alert-error"></div>
+
+    <form id="loginForm">
+      <div class="input-group">
+        <span class="icon">&#128100;</span>
+        <input type="text" id="username" placeholder="Username" required>
+      </div>
+      <div class="input-group">
+        <span class="icon">&#128274;</span>
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn-primary">Login</button>
+    </form>
+
+    <div class="auth-footer">
+      Don't have an account? <a href="register.html">Admin Register</a>
+    </div>
+  </div>
+
+<script src="js/api.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Generate Timetable - AI Timetable Generation System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">&#128197;</div>
+      AI Timetable System
+    </div>
+    <nav>
+      <a href="dashboard.html">&#128202; Dashboard</a>
+      <a href="faculty.html">&#128101; Faculty & Subjects</a>
+      <a href="generate.html" class="active">&#9881; Generate Timetable</a>
+      <a href="view.html">&#128196; View Timetable</a>
+    </nav>
+    <div class="logout" onclick="logout()">&#8592; Logout</div>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <h2>Generate Timetable</h2>
+      <div class="admin-chip"><span class="avatar">A</span> <span id="adminName">Admin</span></div>
+    </div>
+
+    <div class="card">
+      <div id="generateAlert" class="alert alert-error"></div>
+      <form id="generateForm">
+        <div class="form-row">
+          <div>
+            <label>Select Department</label>
+            <select id="department" required>
+              <option value="">Select Department</option>
+              <option value="CSE">Computer Science</option>
+              <option value="ECE">Electronics & Communication</option>
+              <option value="MECH">Mechanical</option>
+              <option value="CIVIL">Civil</option>
+              <option value="IT">Information Technology</option>
+            </select>
+          </div>
+          <div>
+            <label>Select Semester</label>
+            <select id="semester" required>
+              <option value="Semester 1">Semester 1</option>
+              <option value="Semester 2">Semester 2</option>
+              <option value="Semester 3">Semester 3</option>
+              <option value="Semester 4">Semester 4</option>
+              <option value="Semester 5">Semester 5</option>
+              <option value="Semester 6">Semester 6</option>
+              <option value="Semester 7">Semester 7</option>
+              <option value="Semester 8">Semester 8</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>Select Academic Year</label>
+            <select id="academicYear" required>
+              <option value="2024-2025">2024 - 2025</option>
+              <option value="2025-2026">2025 - 2026</option>
+              <option value="2026-2027">2026 - 2027</option>
+            </select>
+          </div>
+          <div></div>
+        </div>
+        <button type="submit" class="btn-small" id="generateBtn" style="padding:12px 20px; width:100%;">&#9881; Generate Timetable</button>
+      </form>
+    </div>
+
+    <div class="card" id="statusCard" style="display:none;">
+      <h3>AI Generation Status</h3>
+      <div class="gen-status-card">
+        <div class="status-list" id="statusList"></div>
+        <div class="checkmark-circle" id="checkmark" style="display:none;">&#10003;</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/generate.js"></script>
+</body>
+</html>
