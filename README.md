@@ -1,120 +1,80 @@
-# AI-Based Timetable Generation System Aligned with NEP 2020
+# AI_Timetable_Generation_System
 
-## Overview
+AI-Based Automatic Timetable Generation System using HTML, CSS, JavaScript, Spring Boot, Hibernate (JPA), and PostgreSQL.
 
-The AI-Based Timetable Generation System is a software application designed to automate timetable creation for colleges and universities. The system is aligned with the National Education Policy (NEP) 2020, which promotes multidisciplinary education and flexible course selection.
+## Project Title
 
-The application generates optimized and conflict-free timetables by considering faculty availability, classroom allocation, subject requirements, and elective course selections. It reduces manual effort, minimizes scheduling errors, and improves resource utilization.
-
----
+**AI-Based Automatic Timetable Generation System**
 
 ## Problem Statement
 
-With the implementation of NEP 2020, students can choose subjects across multiple disciplines. Managing timetables manually becomes difficult due to:
+Many educational institutions prepare timetables manually, which is a time-consuming and error-prone process. Common challenges include:
 
 - Faculty scheduling conflicts
-- Classroom allocation issues
-- Elective subject overlaps
-- Multidisciplinary course structures
-- Time-consuming manual timetable preparation
+- Classroom allocation conflicts
+- Time slot overlaps
+- Manual timetable preparation
+- Difficulty in updating schedules
+- Increased administrative workload
 
-This system addresses these challenges through automated timetable generation.
+A centralized system is required to automate timetable generation and efficiently manage academic schedules.
 
----
+## Project Objectives
 
-## Objectives
+- Automate the timetable generation process.
+- Eliminate scheduling conflicts.
+- Manage faculty, subjects, and classrooms efficiently.
+- Reduce manual effort and save time.
+- Improve timetable accuracy and reliability.
+- Provide an easy-to-use interface for administrators.
 
-- Automate timetable generation.
-- Support multidisciplinary education structures.
-- Prevent faculty and classroom conflicts.
-- Manage elective course scheduling.
-- Improve timetable accuracy and efficiency.
-- Reduce manual scheduling efforts.
+## Users of the System
 
----
+- Administrator
 
-## Features
+## Module List
 
-### Admin Module
-- Add and manage departments
-- Add and manage faculty
-- Add and manage subjects
-- Add and manage classrooms
-- Generate timetables automatically
-- View generated timetables
+### Module 1: User Authentication
+- Admin Registration
+- Admin Login
 
-### Faculty Module
-- View assigned timetable
-- Check classroom allocations
+### Module 2: Dashboard
+- View system overview
+- Quick access to all modules
 
-### Student Module
-- View class timetable
-- Check elective schedules
+### Module 3: Faculty Management
+- Add Faculty
+- Update Faculty
+- Delete Faculty
+- View Faculty
 
-### Timetable Generator
-- Automatic timetable creation
-- Conflict detection and prevention
-- Faculty availability management
-- Classroom allocation optimization
+### Module 4: Subject Management
+- Add Subject
+- Update Subject
+- Delete Subject
+- View Subject
 
----
+### Module 5: Classroom Management
+- Add Classroom
+- View Classrooms
 
-## Technology Stack
+### Module 6: Timetable Generation
+- Generate automatic timetable
+- Allocate faculty and classrooms
+- Prevent scheduling conflicts
 
-### Frontend
-- Java Swing
+### Module 7: View Timetable
+- Display generated timetable
+- View timetable by schedule
 
-### Backend
-- Java
+## Technologies Used
 
-### Database
-- MySQL
+- Frontend: HTML, CSS, JavaScript
+- Backend: Spring Boot
+- ORM: Hibernate (JPA)
+- Database: PostgreSQL
+- Build Tool: Maven
 
-### Connectivity
-- JDBC
+## Conclusion
 
-### IDE
-- Eclipse / IntelliJ IDEA / NetBeans
-
----
-
-## System Modules
-
-### 1. Department Management
-Stores department information such as:
-- Computer Science
-- Electronics
-- Mechanical
-- Civil
-- Management
-
-### 2. Faculty Management
-Maintains faculty details including:
-- Faculty ID
-- Faculty Name
-- Department
-- Availability
-
-### 3. Subject Management
-Stores:
-- Subject Name
-- Credits
-- Assigned Faculty
-- Department
-
-### 4. Classroom Management
-Stores:
-- Room Number
-- Capacity
-- Room Type (Classroom/Lab)
-
-### 5. AI-Based Timetable Generator
-Generates optimized schedules while considering:
-- Faculty availability
-- Classroom availability
-- Subject hours
-- Working days
-- Elective selections
-
-
-
+The AI-Based Automatic Timetable Generation System simplifies the process of timetable creation by automating schedule generation and reducing conflicts. It provides an efficient, accurate, and user-friendly solution for educational institutions.
